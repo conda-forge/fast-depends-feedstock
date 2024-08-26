@@ -1,5 +1,5 @@
 {% set name = "fast-depends" %}
-{% set version = "2.4.9" %}
+{% set version = "2.4.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fast_depends-{{ version }}.tar.gz
-  sha256: ca56542061ba8f8dde12021da3c0b82bc883394211941f03df38527b1d1c2c8a
+  sha256: 80381459d7ee20950d6e53742fe5eca363fee9e456a0cb52357324b3d6803db5
 
 build:
   noarch: python
