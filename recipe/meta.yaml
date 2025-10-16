@@ -17,12 +17,13 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - hatchling
+    - uv_build >=0.9.2
     - pip
   run:
     - python >={{ python_min }}
     - pydantic >=1.7.4,!=1.8,!=1.8.1,<3.0.0
-    - anyio >=3.0.0,<5.0.0
+    - anyio >=4.0.0,<5.0.0
+    - msgspec
 
 test:
   imports:
