@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fast-depends
-  version: 3.0.5
+  version: "3.0.6"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fast_depends-${{ version }}.tar.gz
-  sha256: c915a54d6e0d0f0393686d37c14d54d9ec7c43d7b9def3f3fc4f7b4d52f67f2a
+  sha256: 6a2a11645db40d4850f1300f98ffad93dc09fc95750009359930e8ff03299cc5
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
