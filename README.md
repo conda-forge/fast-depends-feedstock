@@ -17,10 +17,11 @@ Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=22371&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/fast-depends-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/fast-depends-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/fast-depends-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
@@ -43,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `fast-depends` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install fast-depends
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install fast-depends
 ```
 
-It is possible to list all of the versions of `fast-depends` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add fast-depends
+# for installing globally
+pixi global install fast-depends
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `fast-depends` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search fast-depends --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search fast-depends --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search fast-depends --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -79,6 +122,8 @@ mamba repoquery whoneeds fast-depends --channel conda-forge
 # List dependencies of `fast-depends`:
 mamba repoquery depends fast-depends --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
@@ -148,7 +193,4 @@ Feedstock Maintainers
 =====================
 
 * [@carlodri](https://github.com/carlodri/)
-
-
-<!-- dummy commit to enable rerendering -->
 
