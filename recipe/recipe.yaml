@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fast-depends
-  version: "3.0.8"
+  version: "3.0.9"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fast_depends-${{ version }}.tar.gz
-  sha256: 896b16f79a512b6ea1df721b0aa1708a192a06f964be6597e01fcf5412559101
+  sha256: c31c3985d0196ea4998da9f5913a76ede75cc4484d89eeafcea1a6bd64fbca82
 
 build:
   number: 0
@@ -32,7 +32,9 @@ tests:
   - python:
       imports:
         - fast_depends
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - requirements:
       run:
         - pip
